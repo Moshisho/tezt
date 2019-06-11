@@ -1,0 +1,25 @@
+<%= form_for(@failure) do |f| %>
+  <% if @failure.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@failure.errors.count, "error") %> prohibited this failure from being saved:</h2>
+
+      <ul>
+      <% @failure.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :message %><br>
+    <%= f.text_field :message %>
+  </div>
+  <div class="field">
+    <%= f.label :stack_trace %><br>
+    <%= f.text_area :stack_trace %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

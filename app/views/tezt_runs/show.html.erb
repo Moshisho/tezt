@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tezt Run ID:</strong>
+  <%= @tezt_run.id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @tezt_run.status %>
+</p>
+
+<p>
+  <strong>Failure:</strong>
+  <%= @tezt_run.failure %>
+</p>
+
+<p>
+  <strong>Environment:</strong>
+  <%= @tezt_run.environment %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @tezt_run.duration %>
+</p>
+
+<p>
+  <strong>Machine:</strong>
+  <%= @tezt_run.machine %>
+</p>
+
+<p>
+  <strong>Debug:</strong>
+  <%= @tezt_run.debug %>
+</p>
+
+<p>
+  <strong>Assets:</strong>
+  <%= @tezt_run.assets %>
+</p>
+
+<%= link_to 'Edit', edit_tezt_run_path(@tezt_run) %> |
+<%= link_to 'Back', tezt_runs_path %>

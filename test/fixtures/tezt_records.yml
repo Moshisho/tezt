@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tezt_run_id:
+  name: MyString
+  class_name: MyString
+  tags: MyString
+  active: false
+  user_id: 
+  team_id: 
+  flaky: false
+  risk: 1
+  avg_duration: 1
+  jira_test_id: MyString
+  jira_bug_id: MyString
+
+two:
+  tezt_run_id:
+  name: MyString
+  class_name: MyString
+  tags: MyString
+  active: false
+  user_id: 
+  team_id: 
+  flaky: false
+  risk: 1
+  avg_duration: 1
+  jira_test_id: MyString
+  jira_bug_id: MyString

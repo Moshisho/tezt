@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  notify_in_mail: false
+  notify_in_sms: false
+  notify_in_chat: false
+  active: false
+  chat_username: MyString
+  team_id: 
+
+two:
+  name: MyString
+  email: MyString
+  notify_in_mail: false
+  notify_in_sms: false
+  notify_in_chat: false
+  active: false
+  chat_username: MyString
+  team_id: 

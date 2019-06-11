@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Teztrun:</strong>
+  <%= @tezt_record.teztrun %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tezt_record.name %>
+</p>
+
+<p>
+  <strong>Class name:</strong>
+  <%= @tezt_record.class_name %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @tezt_record.tags %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @tezt_record.active %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @tezt_record.user %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @tezt_record.team %>
+</p>
+
+<p>
+  <strong>Flaky:</strong>
+  <%= @tezt_record.flaky %>
+</p>
+
+<p>
+  <strong>Risk:</strong>
+  <%= @tezt_record.risk %>
+</p>
+
+<p>
+  <strong>Avg duration:</strong>
+  <%= @tezt_record.avg_duration %>
+</p>
+
+<p>
+  <strong>Jira test:</strong>
+  <%= @tezt_record.jira_test_id %>
+</p>
+
+<p>
+  <strong>Jira bug:</strong>
+  <%= @tezt_record.jira_bug_id %>
+</p>
+
+<%= link_to 'Edit', edit_tezt_record_path(@tezt_record) %> |
+<%= link_to 'Back', tezt_records_path %>

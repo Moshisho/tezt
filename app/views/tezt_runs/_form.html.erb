@@ -1,0 +1,49 @@
+<%= form_for(@tezt_run) do |f| %>
+  <% if @tezt_run.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tezt_run.errors.count, "error") %> prohibited this tezt_run from being saved:</h2>
+
+      <ul>
+      <% @tezt_run.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tezt_record_id %><br>
+    <%= f.text_field :tezt_record_id %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :failure_id %><br>
+    <%= f.text_field :failure_id %>
+  </div>
+  <div class="field">
+    <%= f.label :environment_id %><br>
+    <%= f.text_field :environment_id %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br>
+    <%= f.number_field :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :machine %><br>
+    <%= f.text_field :machine %>
+  </div>
+  <div class="field">
+    <%= f.label :debug %><br>
+    <%= f.check_box :debug %>
+  </div>
+  <div class="field">
+    <%= f.label :assets %><br>
+    <%= f.text_field :assets %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

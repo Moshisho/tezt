@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tezt Runs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tezt</th>
+      <th>Status</th>
+      <th>Failure</th>
+      <th>Environment</th>
+      <th>Duration</th>
+      <th>Machine</th>
+      <th>Debug</th>
+      <th>Assets</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tezt_runs.each do |tezt_run| %>
+      <tr>
+        <td><%= tezt_run.tezt_record %></td>
+        <td><%= tezt_run.status %></td>
+        <td><%= tezt_run.failure %></td>
+        <td><%= tezt_run.environment %></td>
+        <td><%= tezt_run.duration %></td>
+        <td><%= tezt_run.machine %></td>
+        <td><%= tezt_run.debug %></td>
+        <td><%= tezt_run.assets %></td>
+        <td><%= link_to 'Show', tezt_run %></td>
+        <td><%= link_to 'Edit', edit_tezt_run_path(tezt_run) %></td>
+        <td><%= link_to 'Destroy', tezt_run, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tezt run', new_tezt_run_path %>

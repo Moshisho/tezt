@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @failure.message %>
+</p>
+
+<p>
+  <strong>Stack trace:</strong>
+  <%= @failure.stack_trace %>
+</p>
+
+<%= link_to 'Edit', edit_failure_path(@failure) %> |
+<%= link_to 'Back', failures_path %>

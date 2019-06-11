@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Notify in mail:</strong>
+  <%= @user.notify_in_mail %>
+</p>
+
+<p>
+  <strong>Notify in sms:</strong>
+  <%= @user.notify_in_sms %>
+</p>
+
+<p>
+  <strong>Notify in chat:</strong>
+  <%= @user.notify_in_chat %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @user.active %>
+</p>
+
+<p>
+  <strong>Chat username:</strong>
+  <%= @user.chat_username %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @user.team %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

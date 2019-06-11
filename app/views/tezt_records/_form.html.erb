@@ -1,0 +1,65 @@
+<%= form_for(@tezt_record) do |f| %>
+  <% if @tezt_record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tezt_record.errors.count, "error") %> prohibited this tezt_record from being saved:</h2>
+
+      <ul>
+      <% @tezt_record.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tezt_run_id %><br>
+    <%= f.text_field :tezt_run_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :class_name %><br>
+    <%= f.text_field :class_name %>
+  </div>
+  <div class="field">
+    <%= f.label :tags %><br>
+    <%= f.text_field :tags %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br>
+    <%= f.check_box :active %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :team_id %><br>
+    <%= f.text_field :team_id %>
+  </div>
+  <div class="field">
+    <%= f.label :flaky %><br>
+    <%= f.check_box :flaky %>
+  </div>
+  <div class="field">
+    <%= f.label :risk %><br>
+    <%= f.number_field :risk %>
+  </div>
+  <div class="field">
+    <%= f.label :avg_duration %><br>
+    <%= f.number_field :avg_duration %>
+  </div>
+  <div class="field">
+    <%= f.label :jira_test_id %><br>
+    <%= f.text_field :jira_test_id %>
+  </div>
+  <div class="field">
+    <%= f.label :jira_bug_id %><br>
+    <%= f.text_field :jira_bug_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tezt Records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Teztrun</th>
+      <th>Name</th>
+      <th>Class name</th>
+      <th>Tags</th>
+      <th>Active</th>
+      <th>User</th>
+      <th>Team</th>
+      <th>Flaky</th>
+      <th>Risk</th>
+      <th>Avg duration</th>
+      <th>Jira test</th>
+      <th>Jira bug</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tezt_records.each do |tezt_record| %>
+      <tr>
+        <td><%= tezt_record.tezt_run %></td>
+        <td><%= tezt_record.name %></td>
+        <td><%= tezt_record.class_name %></td>
+        <td><%= tezt_record.tags %></td>
+        <td><%= tezt_record.active %></td>
+        <td><%= tezt_record.user %></td>
+        <td><%= tezt_record.team %></td>
+        <td><%= tezt_record.flaky %></td>
+        <td><%= tezt_record.risk %></td>
+        <td><%= tezt_record.avg_duration %></td>
+        <td><%= tezt_record.jira_test_id %></td>
+        <td><%= tezt_record.jira_bug_id %></td>
+        <td><%= link_to 'Show', tezt_record %></td>
+        <td><%= link_to 'Edit', edit_tezt_record_path(tezt_record) %></td>
+        <td><%= link_to 'Destroy', tezt_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tezt record', new_tezt_record_path %>
